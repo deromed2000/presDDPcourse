@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wage Database explorer and predictor</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Wage Database explorer and predictor">
+  <meta name="author" content="Mohammed Derouich">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Wage Database explorer and predictor</h1>
+    <h2>Developping Data products Project</h2>
+    <p>Mohammed Derouich<br/>Data Scientist</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Wage Database Explorer</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This presentation is being created as part of the peer assessment for the coursera developing data products class. The assignment has to be done with the following tools.</p>
+
+<ol>
+<li>shiny to build data product application</li>
+<li>R-Presentation or slidify to create data product related presentations</li>
+</ol>
+
+<p>The application is made up of two parts :</p>
+
+<ol>
+<li><p>The explorer panel </p></li>
+<li><p>The predictor panel </p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>The Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>The goal here is to show the difference in wage by year regarding :</h3>
+
+<ol>
+<li>The School grading</li>
+<li>The race</li>
+</ol>
+
+<p>The panel allows user to manipulate some parameters :</p>
+
+<ol>
+<li><p>The nature of job among two categories : </p>
+
+<p>a. Informational job</p>
+
+<p>b. Industrial job</p></li>
+<li><p>The health insurance : this will show us the difference between those who contract a health insurance and those who do not.            </p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Wage Database predictor</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The predictor allows user to fill in different variables among choice lists and subsequently the algorithm behind the scene return a wage that corresponds.</p>
+
+<p>The algorithm used here is the Random Forest tree.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>The data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This application is based on data collected in Mid-Atlantic region in US and consists on 3000 persons survey.</p>
+
+<pre><code class="r">summary(WageData)
+</code></pre>
+
+<pre><code>##       year           age                     maritl           race     
+##  Min.   :2003   Min.   :18.00   1. Never Married: 648   1. White:2480  
+##  1st Qu.:2004   1st Qu.:33.75   2. Married      :2074   2. Black: 293  
+##  Median :2006   Median :42.00   3. Widowed      :  19   3. Asian: 190  
+##  Mean   :2006   Mean   :42.41   4. Divorced     : 204   4. Other:  37  
+##  3rd Qu.:2008   3rd Qu.:51.00   5. Separated    :  55                  
+##  Max.   :2009   Max.   :80.00                                          
+##               education             jobclass     health_ins  
+##  1. &lt; HS Grad      :268   1. Industrial :1544   1. Yes:2083  
+##  2. HS Grad        :971   2. Information:1456   2. No : 917  
+##  3. Some College   :650                                      
+##  4. College Grad   :685                                      
+##  5. Advanced Degree:426                                      
+##                                                              
+##       wage       
+##  Min.   : 20.09  
+##  1st Qu.: 85.38  
+##  Median :104.92  
+##  Mean   :111.70  
+##  3rd Qu.:128.68  
+##  Max.   :318.34
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Wage Database Explorer'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The Application'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Wage Database predictor'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='The data'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

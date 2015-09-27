@@ -1,0 +1,75 @@
+---
+title       : Wage Database explorer and predictor
+subtitle    : Developping Data products Project
+author      : Mohammed Derouich
+job         : Data Scientist
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Wage Database Explorer
+
+This presentation is being created as part of the peer assessment for the coursera developing data products class. The assignment has to be done with the following tools.
+
+1. shiny to build data product application
+2. R-Presentation or slidify to create data product related presentations
+
+The application is made up of two parts :
+
+1. The explorer panel 
+
+2. The predictor panel 
+
+---
+ 
+## The Application
+
+### The goal here is to show the difference in wage by year regarding :
+
+1. The School grading
+2. The race
+
+The panel allows user to manipulate some parameters :
+
+1. The nature of job among two categories : 
+
+      a. Informational job
+      
+      b. Industrial job
+      
+2. The health insurance : this will show us the difference between those who contract a health insurance and those who do not.            
+
+--- .class #id  
+
+## Wage Database predictor
+
+
+The predictor allows user to fill in different variables among choice lists and subsequently the algorithm behind the scene return a wage that corresponds.
+
+The algorithm used here is the Random Forest tree.
+
+---
+
+## The data
+
+
+This application is based on data collected in Mid-Atlantic region in US and consists on 3000 persons survey.
+
+````{r, echo=FALSE}
+library(ISLR)
+data(Wage)
+WageData <- subset(Wage,select=-c(logwage, region, sex, health))
+````
+
+
+```{r}
+summary(WageData)
+```
+
+
+
+
