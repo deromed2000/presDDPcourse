@@ -52,6 +52,8 @@ The predictor allows user to fill in different variables among choice lists and 
 
 The algorithm used here is the Random Forest tree.
 
+The link to GitHub repo is https://github.com/deromed2000/presDDPcourse
+
 ---
 
 ## The data
@@ -60,7 +62,7 @@ The algorithm used here is the Random Forest tree.
 This application is based on data collected in Mid-Atlantic region in US and consists on 3000 persons survey.
 
 
-
+Here a sight inside the data
 
 
 ```r
